@@ -16,7 +16,7 @@
     "sort-by": "^0.0.2"
   },
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "server.js"
   },
   "devDependencies": {
     "@types/react-router-dom": "^5.3.3",
