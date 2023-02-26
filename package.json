@@ -21,5 +21,19 @@
   "devDependencies": {
     "@types/react-router-dom": "^5.3.3",
     "object-assign": "^4.1.1"
-  }
+  },
+  "name": "prifukdeploy",
+  "version": "1.0.0",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tomistoma/prifuk.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tomistoma/prifuk/issues"
+  },
+  "homepage": "https://github.com/Tomistoma/prifuk#readme",
+  "description": ""
 }
