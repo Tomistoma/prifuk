@@ -3,6 +3,7 @@ const rateLimit = require('express-rate-limit')
 const express = require('express');
 const app = express();
 const mongoose = require("mongoose");
+const path = require('path');
 
 
 
@@ -14,7 +15,7 @@ app.use(express.json());
 
 const limiter = rateLimit({
     windowMs: 2.5 * 60 * 1000, // 15 minutes
-    max: 20,
+    max: 100,
     path: '/members/api/member' 
   });
   app.use(limiter);
@@ -34,6 +35,22 @@ app.use('/posts/', posts);
 const members = require('./routes/members');
 app.use('/members/', members);
 
+
+
+app.use(express.static(path.join(__dirname, 'build')));
+
+
+app.get('/*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
+/*
+app.use(express.static('C:/Users/tomas/Coding/prifukDeploy/backend/build/build'));
+
+
+app.get('/*', (req, res) => {
+  res.sendFile('C:/Users/tomas/Coding/prifukDeploy/backend/build/index.html');
+});
+*/
 
 
 app.listen(3001, () => {
