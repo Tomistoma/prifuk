@@ -28,13 +28,13 @@
   "main": "server.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Tomistoma/prifuk.git"
+    "url": "git+https://github.com/Tomistoma/prifuk2.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Tomistoma/prifuk/issues"
+    "url": "https://github.com/Tomistoma/prifuk2/issues"
   },
-  "homepage": "https://github.com/Tomistoma/prifuk#readme",
+  "homepage": "https://github.com/Tomistoma/prifuk2#readme",
   "description": ""
 }

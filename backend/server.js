@@ -22,7 +22,7 @@ const limiter = rateLimit({
 
 const cors = require('cors');
 const corsOptions ={
-    origin:['http://localhost:3000',"dev-zbydz5ck.us.auth0.com", 'http://localhost:3001'], 
+    origin:['https://prifuk.onrender.com', "http://localhost:3001", "http://localhost:3000"], 
     credentials:true,
     accessControlAllowCredentials:true,
     optionSuccessStatus:200,
@@ -34,6 +34,8 @@ const posts = require('./routes/posts');
 app.use('/posts/', posts);
 const members = require('./routes/members');
 app.use('/members/', members);
+const ideas = require('./routes/ideas');
+app.use('/ideas/', ideas);
 
 
 
@@ -43,14 +45,6 @@ app.use(express.static(path.join(__dirname, 'build')));
 app.get('/*', (req, res) => {
   res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
-/*
-app.use(express.static('C:/Users/tomas/Coding/prifukDeploy/backend/build/build'));
-
-
-app.get('/*', (req, res) => {
-  res.sendFile('C:/Users/tomas/Coding/prifukDeploy/backend/build/index.html');
-});
-*/
 
 
 app.listen(3001, () => {

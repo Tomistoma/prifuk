@@ -1,0 +1,63 @@
+
+###
+POST  http://localhost:3001/ideas/api/idea
+Content-Type: application/json
+
+{
+    "ideaName": "Můj skvělý nápad",
+    "email": "Svobodatoma@natur.cuni.cz",
+    "description": "Nějak popisek",
+    "needs": "Tady bude napsané, co bude potřeba",
+    "helper": ["hey hou"],
+    "approval": false
+
+}
+###
+GET  http://localhost:3001/ideas/api
+
+###
+###
+GET  http://localhost:3001/ideas/api
+
+###
+
+
+DELETE   http://localhost:3001/posts/api/id/63fa71e7f2ef6422741b22e7
+
+###
+POST  http://localhost:3001/members/api/member
+Content-Type: application/json
+
+{
+    "name": "Martin",
+    "surname": "Žáček",
+    "email": "martinzac@natur.cuni.cz",
+    "membership": "Člen senátu",
+    "musicTaste": "techno",
+    "telNumber": "736134563",
+    "section": "Chemie",
+    "publicationAuth": true
+
+}
+###
+GET  http://localhost:3001/posts/api/section/Events
+
+###
+Content-Type: application/json
+
+{
+    "name":"Kotora",
+    "caption": "Big organic guy......................",
+    "faculty": "LF1",
+    "imageURL": "https://www.natur.cuni.cz/fakulta/senat/portrety/kotora-img-8007.jpg"
+}
+###
+POST  http://localhost:3001/subjects/api/subject
+Content-Type: application/json
+
+{
+    "section": "Chemie",
+    "subjectCode": "MC260P41K",
+    "subject": "Dějiny alchymie a chemie"
+    
+}
